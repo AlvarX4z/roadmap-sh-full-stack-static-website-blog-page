@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&family=Roboto&family=Space+Mono&Sansita+Swashed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&family=Roboto:wght@300,700&family=Space+Mono&Sansita+Swashed:wght@300&Quicksand:wght@300&display=swap");
 
 :root {
   --background-color: #232830;
@@ -33,6 +33,14 @@
   font-family: "Sansita Swashed", cursive;
 }
 
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
 body {
   background-color: var(--background-color, black);
   padding: 5vh 5vw;
@@ -47,12 +55,16 @@ body {
   width: 100%;
 }
 
-.nav-menu {
-  display: inline-flex;
+ul {
   list-style: none;
+  display: inline-flex;
 }
 
-.nav-menu > li {
+a {
+  text-decoration: none;
+}
+
+.nav-menu > a > li {
   margin: 0 3vw;
 }
 
@@ -87,13 +99,77 @@ hr {
 }
 
 .navbar {
-    display: flex;
-    flex-basis: 1 3;
-    justify-items: flex-end;
+  display: flex;
+  justify-items: flex-end;
 }
 
 button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.navbar > ul > li {
+  margin: 0 1vw;
+}
+
+#cards-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 2vh 2vw;
+  width: 100%;
+}
+
+.card:hover {
+  animation-name: card, card-line;
+}
+
+.card-image {
+  border-radius: 2rem;
+  max-width: 23vw;
+  margin: 0 auto;
+  margin-bottom: 2vh;
+}
+
+.card-title,
+.card-description {
+  margin-bottom: 2vh;
+}
+
+.card-footer {
+  border-top: 0.1rem solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+  position: relative;
+}
+
+@keyframes card {
+  0% {
+    background-color: var(--white);
+  }
+  100% {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+}
+
+@keyframes card-line {
+  0% {
+    background-color: var(--accent-color);
+  }
+  100% {
+    background-color: var(--background-color);
+    color: var(--white);
+  }
 }
