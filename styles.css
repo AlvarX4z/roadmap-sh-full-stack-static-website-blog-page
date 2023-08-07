@@ -75,26 +75,26 @@ a {
 }
 
 .material-symbols-outlined.pencil-icon {
-  color: var(--accent-color);
+  color: var(--accent-color, red);
   transform: scale(10);
   margin-top: 5vh;
   margin-bottom: 13vh;
 }
 
 h1 {
-  color: var(--accent-color);
+  color: var(--accent-color, red);
   font-size: 4rem;
   margin-bottom: 2vh;
 }
 
 #welcome > p {
-  color: var(--white);
+  color: var(--white, white);
   font-size: 1.2rem;
   margin-bottom: 7vh;
 }
 
 hr {
-  border: 0.1rem solid var(--line-color);
+  border: 0.1rem solid var(--line-color, gray);
   margin-bottom: 2vh;
 }
 
@@ -118,10 +118,11 @@ button {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-bottom: 15vh;
 }
 
 .card {
-  background-color: var(--white);
+  background-color: var(--white, white);
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
@@ -153,18 +154,68 @@ button {
 }
 
 .card-footer {
-  border-top: 0.1rem solid var(--accent-color);
+  border-top: 0.1rem solid var(--accent-color, red);
   display: flex;
   justify-content: space-between;
   padding-top: 1vh;
 }
 
+#page-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 10vh;
+}
+
+.page-selector {
+  color: var(--gray, gray);
+  font-size: 1.7rem;
+}
+
+#page-nav > a:hover {
+  animation: page-nav;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  color: var(--gray, gray);
+  font-size: 1.7rem;
+}
+
+footer {
+  color: var(--white, white);
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.twitter-button {
+  background-color: var(--twitter-blue, blue);
+  color: var(--white, white);
+}
+
 @keyframes card {
   0% {
-    background-color: var(--white);
+    background-color: var(--white, white);
   }
   100% {
-    background-color: var(--accent-color);
-    color: var(--background-color);
+    background-color: var(--accent-color, red);
+    color: var(--background-color, black);
+  }
+}
+
+@keyframes page-nav {
+  0% {
+    color: var(--gray, gray);
+  }
+  100% {
+    color: var(--accent-color, red);
   }
 }
