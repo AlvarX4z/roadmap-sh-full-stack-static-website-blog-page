@@ -125,13 +125,15 @@ button {
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
-  
   padding: 2vh 2vw;
   width: 100%;
 }
 
 .card:hover {
-  animation-name: card, card-line;
+  animation-name: card;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 .card-image {
@@ -161,15 +163,5 @@ button {
   100% {
     background-color: var(--accent-color);
     color: var(--background-color);
-  }
-}
-
-@keyframes card-line {
-  0% {
-    background-color: var(--accent-color);
-  }
-  100% {
-    background-color: var(--background-color);
-    color: var(--white);
   }
 }
