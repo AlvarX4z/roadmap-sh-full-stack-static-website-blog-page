@@ -85,12 +85,14 @@ h1 {
   color: var(--accent-color, red);
   font-size: 4rem;
   margin-bottom: 2vh;
+  text-align: center;
 }
 
 #welcome > p {
   color: var(--white, white);
   font-size: 1.2rem;
   margin-bottom: 7vh;
+  text-align: center;
 }
 
 hr {
@@ -221,5 +223,78 @@ footer {
   }
   100% {
     color: var(--accent-color, red);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #cards-container {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-image {
+    max-width: 35vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    overflow-x: auto;
+    padding: 2vh 0;
+  }
+
+  .footer-left {
+    font-size: 0.7rem;
+    justify-content: space-around;
+    width: 75%;
+  }
+
+  .twitter-button {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    font-size: 1.2rem;
+  }
+
+  #cards-container {
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-image {
+    max-width: 75vw;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 599px) {
+  .navbar {
+    font-size: 0.9rem;
+  }
+
+  #welcome > p {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+
+  .card-text {
+    padding: 0 3vw;
+  }
+
+  #page-nav {
+    width: 80%;
+  }
+
+  footer {
+    width: 100%;
   }
 }
