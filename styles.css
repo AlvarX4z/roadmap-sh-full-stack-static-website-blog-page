@@ -193,12 +193,16 @@ footer {
 .footer-left {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 50%;
 }
 
 .twitter-button {
   background-color: var(--twitter-blue, blue);
+  border-radius: 0.5rem;
   color: var(--white, white);
+  font-weight: bold;
+  padding: 1vh 1vw;
 }
 
 @keyframes card {
